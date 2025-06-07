@@ -1,4 +1,6 @@
 **Data Warehouse and Analytics Project**
+
+
 Welcome to the Data Warehouse and Analytics Project repository.
 
 This project presents a complete, end-to-end implementation of a data warehousing and analytics solution. It is developed as a portfolio project to illustrate practical expertise in data engineering and analytics, encompassing the design of a scalable data warehouse, development of efficient data pipelines, and generation of actionable business insights.
@@ -35,3 +37,6 @@ Develop SQL-based analytics to deliver detailed insights into:
 ### 1. License  
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.  
+
+**About Me**
+I am Rohit Chandorkar, I like to work with data
