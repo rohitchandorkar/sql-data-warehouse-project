@@ -17,7 +17,6 @@ Usage Example:
     EXEC SILVER.LOAD_SILVER;
 ===============================================================================
 */
-
 CREATE OR ALTER PROCEDURE SILVER.LOAD_SILVER AS
 BEGIN
     DECLARE @START_TIME DATETIME, @END_TIME DATETIME, @BATCH_START_TIME DATETIME, @BATCH_END_TIME DATETIME; 
@@ -207,6 +206,10 @@ BEGIN
                 WHEN TRIM(CNTRY) = 'DE' THEN 'GERMANY'
                 WHEN TRIM(CNTRY) IN ('US', 'USA') THEN 'UNITED STATES'
                 WHEN TRIM(CNTRY) = '' OR CNTRY IS NULL THEN 'N/A'
+				WHEN UPPER(TRIM(CNTRY)) = 'Australia' THEN 'AUSTRALIA'
+				WHEN UPPER(TRIM(CNTRY)) = 'Canada' THEN 'CANADA'
+				WHEN UPPER(TRIM(CNTRY)) = 'france' THEN 'FRANCE'
+				WHEN UPPER(TRIM(CNTRY)) = 'united Kingdom' THEN 'UNITED KINGDOM'
                 ELSE TRIM(CNTRY)
             END AS CNTRY
         FROM BRONZE.ERP_LOC_A101;
